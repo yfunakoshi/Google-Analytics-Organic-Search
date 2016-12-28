@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Google Analytics オーガニック検索ソース 自動登録ブックマークレット</title>
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Quicksand:400,700">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    *:before, *:after {
+      box-sizing: border-box;
+    }
+    article, aside, details, figcaption, figure,
+    footer, header, menu, nav, section, main {
+      display: block;
+    }
+
+    html {
+      font-size: 62.5%;
+    }
+
+    body, select, input, textarea, pre {
+      color: #454545;
+      font-family: 'Quicksand', 'Hiragino Kaku Gothic ProN', '游ゴシック体', 'Yu Gothic', YuGothic, 'メイリオ', Meiryo, 'MS PGothic', 'ＭＳ Ｐゴシック', sans-serif;
+      font-size: 14px;
+      font-size: 1.4rem;
+      line-height: 1.75;
+      text-align: center;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      background-color: #f0f0f0;
+      padding: 1em 0 4em;
+    }
+
+    .u-ib {
+      display: inline-block;
+    }
+
+    .u-nw {
+      white-space: nowrap;
+    }
+
+    .u-textleft {
+      text-align: left;
+    }
+    .u-textcenter {
+      text-align: center;
+    }
+    .u-textright {
+      text-align: right;
+    }
+
+    .u-xsmall {
+      font-size: x-small;
+    }
+
+    .ga {
+      color: #fe9b0a;
+      display: block;
+    }
+
+    .btn {
+      border-radius: 5px;
+      color: #666;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 14px;
+      font-size: 1.4rem;
+      font-weight: normal;
+      padding: 8px 20px;
+      position: relative;
+      text-align: left;
+      text-decoration: none;
+      -webkit-transition: box-shadow .4s;
+      -moz-transition: box-shadow .4s;
+      -ms-transition: box-shadow .4s;
+      -o-transition: box-shadow .4s;
+      transition: box-shadow .4s;
+    }
+    .btn--warning {
+      background-color: #fb5621;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .site-content {
+      background-color: #fff;
+      border-radius: 4px;
+      border: 1px dotted #aaa;
+      display: inline-block;
+      margin: 2em auto 0;
+      padding: 2em;
+      text-align: left;
+    }
+
+    .heading {
+      clear: both;
+      text-align: center;
+    }
+    .heading__title {
+      color: #333;
+      font-size: 2.4rem;
+      font-weight: bold;
+    }
+
+    .heading2 {
+      clear: both;
+      text-align: center;
+    }
+    .heading2__title {
+      display: inline-block;
+      color: #333;
+      font-size: 2.4rem;
+      font-weight: bold;
+      margin: 0;
+      padding: 0 30px;
+      position: relative;
+    }
+    .heading2__title:before,
+    .heading2__title:after {
+      content: "";
+      display: inline-block;
+      height: 10px;
+      margin-top: -5px;
+      position: absolute;
+      top: 50%;
+      width: 10px;
+    }
+    .heading2__title:before {
+      border-radius: 3px 0 0 3px;
+      background-color: #fe9b0a;
+      left: 0;
+    }
+    .heading2__title:after {
+      border-radius: 0 3px 3px 0;
+      background-color: #fb5621;
+      left: 10px;
+    }
+
+    * + .heading2 {
+      margin-top: 2em;
+    }
+  </style>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-62536003-1', 'auto');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+  </script>
+</head>
+<body>
+
+<header class="heading">
+  <h1 class="heading__title"><span class="ga">Google Analytics</span>オーガニック検索ソース 自動登録ブックマークレット</h1>
+</header>
+
+<main class="site-content">
+
+<div class="section">
+  <div class="heading2">
+    <h2 class="heading2__title">ブックマークレット</h2>
+  </div>
+  <p class="u-textcenter"><a class="btn  btn--warning" href="javascript:(function(d){var s=d.createElement('script');s.id='TrackingOrganicSearchSources';s.charset='UTF-8';s.src='//dl.dropboxusercontent.com/u/9154840/ga.organic/add.min.js';d.body.appendChild(s)})(document);">GA:organic</a></p>
+  <p class="u-textcenter  u-xsmall">↑↑↑上記のブックマークレット↑↑↑を、<br>
+  ブックマークバーにドラッグ・アンド・ドロップしてください。</p>
+
+  <div class="heading2">
+    <h2 class="heading2__title">使い方</h2>
+  </div>
+  <p>
+  <a href="http://tetesuke.hatenadiary.jp/entry/search_engine_recognition" target="_blank">でぶててのWEB録</a>さんの記事で公開されているスプレッドシートの入力を<br>
+  一括・自動で処理したく、ブックマークレットを作りました。<br>
+  <br>
+  オーガニック検索ソースページのところで、<br>
+  ブックマークレットを実行すると処理が開始されます。<br>
+  <br>
+  URLが切り替わらないところを利用して、<br>
+  ボタンひとつ以外何もしないのを目指しました。<br>
+  <br>
+  新規で登録ならさくっと出来ます！<br>
+  <br>
+  内容ではなく登録されている行で判断しているため、<br>
+  すでに独自で何か登録されている場合は、<br>
+  かぶりなどが発生する場合があるかもしれません。<br>
+  <br>
+  上記のスプレッドシート通りに、途中まで入力しているならば、<br>
+  問題なくそのまま続きを登録出来ます。
+  </p>
+
+  <div class="heading2">
+    <h2 class="heading2__title">動作確認</h2>
+  </div>
+  <ul>
+    <li>windows（chrome、firefox 最新版）</li>
+    <li>mac（chrome、safari 最新版）</li>
+  </ul>
+
+  <div class="heading2">
+    <h2 class="heading2__title">変更履歴</h2>
+  </div>
+  <ul>
+    <li>2015年5月21日 GA側の更新につき微修正</li>
+    <li>2015年4月26日 公開</li>
+  </ul>
+</div>
+
+</main>
+
+</body>
+</html>
