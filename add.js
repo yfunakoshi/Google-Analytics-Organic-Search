@@ -17,7 +17,7 @@ if ( $('#ID-m-content-content > h2').text() === 'オーガニック検索ソー�
     ;
 
     var s = 1000, // 処理待機時間
-        mv = 35,  // 登録最大個数
+        mv = 37,  // 登録最大個数
         $e = $('#ga_search_data_state'),
         $r = $('#ga_search_data_bar'),
         $n = $('#ga_search_data_now'),
@@ -104,6 +104,8 @@ if ( $('#ID-m-content-content > h2').text() === 'オーガニック検索ソー�
         if ( l  === 33 ) { d("tnc", "search.tnc.ne.jp", "q"); } else
         if ( l  === 34 ) { d("t-com", "search.t-com.ne.jp", "q"); } else
         if ( l  === 35 ) { d("jiqoo", "search.jiqoo.jp", "q"); } else
+        if ( l  === 36 ) { d("auone", "sp-web.search.auone.jp", "q"); } else
+        if ( l  === 37 ) { d("green goo", "green.search.goo.ne.jp", "MT"); } else
         {
           $e.css({'color': '#23945C', 'font-weight': 'bold'}).text('登録が完了しました！');
           $n.text(mv);
