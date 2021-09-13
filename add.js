@@ -21,7 +21,8 @@ javascript:
 
       // 設定
       const time = 1000, // 処理待機時間
-            max = 17 // 登録最大個数
+            // max = 20 // 登録最大個数（クエリあり）
+            max = 17 // 登録最大個数（クエリなし）
       ;
 
       $body
@@ -90,6 +91,8 @@ javascript:
           } else {
             $btn.trigger('click');
             switch (length) {
+              /* 
+              // クエリありの場合。Chrome v85からはクエリが送信されなくなり、クエリを含んでいるとオーガニック検索ソースに振り分けられなくなる
               case 0  : register("so-net", "so-net.ne.jp", "query"); break;
               case 1  : register("nifty", "nifty.com", "Text"); break;
               case 2  : register("nifty", "nifty.com", "q"); break;
@@ -108,6 +111,29 @@ javascript:
               case 15 : register("ask", "ask.com", "searchFor"); break;
               case 16 : register("au", "search.auone.jp", "q"); break;
               case 17 : register("goo.ne", "green.search.goo.ne.jp", "MT"); break;
+              case 18 : register("docomo", "docomo.ne.jp", "MT"); break;
+              case 19 : register("rakuten", "websearch.rakuten.co.jp", "qt"); break;
+              case 20 : register("biglobe", "biglobe.ne.jp ", "q"); break;
+              */
+              // クエリなしの場合
+              case 0  : register("so-net", "so-net.ne.jp", ""); break;
+              case 1  : register("nifty", "nifty.com", ""); break;
+              case 2  : register("excite", "excite.co.jp", ""); break;
+              case 3  : register("livedoor", "livedoor.com", ""); break;
+              case 4  : register("j:com", "myjcom.jp", ""); break;
+              case 5 : register("sleipnir", "fenrir-inc.com", ""); break;
+              case 6 : register("lunascape", "luna.tv", ""); break;
+              case 7 : register("fujitsu", "fmworld.net", ""); break;
+              case 8 : register("hao123", "hao123.com", ""); break;
+              case 9 : register("fooooo", "fooooo.com", ""); break;
+              case 10 : register("jword", "jword.jp", ""); break;
+              case 11 : register("kingsoft", "kingsoft.jp", ""); break;
+              case 12 : register("ask", "ask.com", ""); break;
+              case 13 : register("au", "search.auone.jp", ""); break;
+              case 14 : register("goo.ne", "goo.ne.jp", ""); break;
+              case 15 : register("docomo", "docomo.ne.jp", ""); break;
+              case 16 : register("rakuten", "websearch.rakuten.co.jp", ""); break;
+              case 17 : register("biglobe", "biglobe.ne.jp ", ""); break;
             }
           }
         } else {
